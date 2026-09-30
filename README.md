@@ -1,41 +1,49 @@
 # ComputerSD
 
-ComputerSD 的 GUI agent 在线训练代码。`online-rl/` 包含 agent、环境客户端、rollout、reward 与训练入口；`slime/` 和 `Megatron-LM/` 是训练依赖源码。
+**Online Self-Distillation from Real-Time Feedback for Computer-Use Agents**
 
-## 目录
+ComputerSD helps computer-use agents learn from ongoing interaction with executable GUI environments. After each action, a GUI analyzer turns the resulting state transition into real-time guidance and a step-level value score. The guidance supplies privileged context for online self-distillation, while the value score regulates its token-level learning signals. ComputerSD combines these signals with trajectory-level GRPO in a fully asynchronous training framework. On OSWorld-Verified, it improves success rates over outcome-only GRPO by 1.9 percentage points with Qwen3-VL-8B-Thinking and 4.1 points with EvoCUA-8B.
 
-- `online-rl/scripts/`：训练与辅助启动脚本、YAML 配置。
-- `online-rl/train_fully_async.py`：异步训练入口。
-- `online-rl/train_serial_opd.py`：串行 OPD 训练入口。
-- `online-rl/evaluation_examples/`：GUI 任务元数据。
-- `slime/`、`Megatron-LM/`：底层训练框架。
+## Quick Start
 
-## 运行前配置
-
-脚本面向 Linux、多 GPU、Ray、SGLang、Megatron-LM 与可访问的 GUI 环境服务。各节点需能读取相同的模型和配置路径。先安装当前仓库所需依赖，再设置实际路径与服务地址，例如：
+After installing the training dependencies and starting an accessible OSWorld environment server, run the 16-GPU configuration from the repository root:
 
 ```bash
 export HF_CKPT=path/to/qwen3-vl-8b-thinking
 export ANALYZER_MODEL_PATH=path/to/gui-analyzer
 export GUI_ENV_SERVER_URL=http://gui-env-host/osworld-node
-```
-
-`path/to/...` 均为占位路径，运行前应替换为实际路径；不需要 analyzer 的训练可只设置 `HF_CKPT`。输出目录、GPU 数量和并发度可通过脚本中的同名环境变量覆盖。
-
-## 主要训练脚本
-
-从仓库根目录运行：
-
-```bash
-# GRPO；ENABLE_PRM=0 可关闭 analyzer 奖励
-bash online-rl/scripts/gui_qwen3vl_16gpu_async_grpo.sh
-
-# GRPO + online self-distillation
 bash online-rl/scripts/gui_qwen3vl_16gpu_async_grpo_opd.sh
-
-# GiGPO
-bash online-rl/scripts/gui_qwen3vl_16gpu_async_gigpo.sh
-
-# EvoCUA 对应配置
-bash online-rl/scripts/gui_evocua_8b_16gpu_async_grpo_opd.sh
 ```
+
+Replace the placeholder model paths and server address with your own. The launcher uses `online-rl/`, `slime/`, and `Megatron-LM/` from this repository.
+
+## Method in Brief
+
+![Overview of ComputerSD](assets/method.png)
+
+**GUI analyzer supervised fine-tuning (Section 3.2).** We collect diverse successful and unsuccessful trajectories from a base policy interacting with OSWorld. An expert model annotates each step's GUI transition with guidance and a value score. A GUI analyzer initialized from the same base policy is then fine-tuned on these annotations and frozen for subsequent online policy training, where it provides real-time feedback after each action.
+
+**Value-gated on-policy self-distillation (Section 3.3).** For each task, the policy samples a group of trajectories, whose terminal outcomes determine the group-relative GRPO signal. At each executed step, the analyzer supplies guidance and a value score. We rescore the sampled response under its ordinary context and under a privileged context augmented with that guidance. A value gate uses the score to regulate the resulting token-level probability shifts, reinforcing signals aligned with the step judgment and suppressing misaligned ones. The gated self-distillation objective is optimized jointly with GRPO; the deployed agent acts from ordinary context alone.
+
+**Fully asynchronous training.** Environment interaction, GUI analysis, and privileged rescoring proceed across rollout workers while the trainer updates the policy from collected trajectory batches. Updated policy weights are published asynchronously to the workers for subsequent interactions.
+
+![Fully asynchronous online training framework (Figure 3)](assets/async.png)
+
+## Results
+
+OSWorld-Verified success rate (Pass@1). These results are averaged over three independent evaluation runs.
+
+| Model | Type | Max Steps | Success Rate (%) |
+| --- | --- | ---: | ---: |
+| Qwen3-VL-8B-Thinking | General | 50 | 33.8 |
+| ↳ w/ GRPO | General | 50 | 37.9 |
+| ↳ **w/ ComputerSD** | General | 50 | **39.8** |
+| EvoCUA-8B | Specialized | 50 | 41.3 |
+| ↳ w/ GRPO | Specialized | 50 | 43.8 |
+| ↳ **w/ ComputerSD** | Specialized | 50 | **47.9** |
+
+## Acknowledgements
+
+This work builds on [slime](https://github.com/THUDM/slime).
+
+## Citation

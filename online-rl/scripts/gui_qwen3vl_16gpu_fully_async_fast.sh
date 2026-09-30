@@ -37,8 +37,7 @@ fi
 # Remote env server (OSWorld cluster, /allocate lease protocol). Override as needed.
 : "${GUI_ENV_SERVER_URL:?Set GUI_ENV_SERVER_URL to the environment server URL}"
 export GUI_ENV_SERVER_URL
-# GUI_ENV_CLIENT is intentionally NOT set here: aligned with gui_qwen3vl_16gpu_fast.sh,
-# which leaves it unset so the rollout_fast worker falls back to the legacy
+# Leave GUI_ENV_CLIENT unset so the rollout_fast worker falls back to the legacy
 # lease-HTTP GuiEnvClient (matches the /allocate protocol on port 18000). Set
 # GUI_ENV_CLIENT=session only if pointing at a /v1/sessions server (e.g. :19000).
 # Concurrent GUI env sessions. Under fully-async the worker keeps a fixed
@@ -117,8 +116,7 @@ ROLLOUT_BATCH_SIZE=${ROLLOUT_BATCH_SIZE:-8}
 N_SAMPLES_PER_PROMPT=${N_SAMPLES_PER_PROMPT:-8}
 
 # ===========================================================================
-# FULLY-ASYNC CHANGE #1: switch the train rollout scheduler to slime's
-# fully-async worker. Only flag that distinguishes this from gui_qwen3vl_16gpu_fast.sh.
+# Use slime's fully asynchronous worker for training rollouts.
 # ===========================================================================
 ROLLOUT_ARGS=(
   --rollout-function-path rollout_fast.fully_async_rollout.generate_rollout_fully_async
