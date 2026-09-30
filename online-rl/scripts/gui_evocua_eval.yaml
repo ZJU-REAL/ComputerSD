@@ -1,0 +1,10 @@
+dynamic_history: false
+gui_max_steps: 50
+gui_max_image_history_length: 3
+gui_max_history_turns: 3
+gui_resize_factor: 32
+gui_prompt_style: S2
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60
+prm_enable: false

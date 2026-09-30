@@ -1,0 +1,21 @@
+# GRPO + OPD using one precomputed trajectory-level guidance per task.
+# The rollout code keeps prm_enable true for the existing reward/sample path,
+# but PrmHook bypasses analyzer construction when GUI_GUIDANCE_FILE is set.
+dynamic_history: true
+prm_enable: true
+prm_step_coef: 0.0
+gui_opd_enable: ${GUI_OPD_ENABLE}
+rollout_model_name: actor
+train_prm: 0
+prm_reward_function_path: reward.prm_grpo.prm_reward_func
+prm_reward_post_process_path: reward.prm_grpo.prm_post_process_rewards
+prm_advantage_estimator: grpo
+prm_reward_key: score
+
+gui_max_steps: 30
+gui_wait_after_reset: 60
+gui_sleep_after_execution: 0.5
+gui_max_image_history_length: 3
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60

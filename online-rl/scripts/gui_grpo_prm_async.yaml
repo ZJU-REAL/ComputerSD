@@ -1,0 +1,31 @@
+# Qwen3-VL GRPO with a frozen analyzer used only for scalar process rewards.
+dynamic_history: true
+grpo_singleton_reinforce_coef: 1.0
+
+gui_max_steps: 30
+gui_wait_after_reset: 60
+gui_sleep_after_execution: 0.5
+gui_max_image_history_length: 3
+
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60
+
+# reward_func._compose_with_prm computes:
+#   trajectory_reward + prm_step_coef * mean(step_scores)
+# Standard dynamic-history GRPO then normalizes once per distinct trajectory
+# within the prompt group and broadcasts the advantage to its step samples.
+prm_enable: true
+prm_step_coef: ${PRM_STEP_COEF}
+train_prm: false
+rollout_model_name: actor
+gui_reward_agent_class_path: reward.analyzer_agent.AnalyzerAgent
+prm_model_path: ${ANALYZER_MODEL_PATH}
+prm_model_name: ${ANALYZER_MODEL_NAME}
+prm_temperature: ${PRM_TEMPERATURE}
+prm_max_new_tokens: ${PRM_MAX_NEW_TOKENS}
+prm_max_concurrency: ${PRM_MAX_CONCURRENCY}
+prm_m: ${PRM_M}
+prm_max_retries: ${PRM_MAX_RETRIES}
+prm_http_max_retries: ${PRM_HTTP_MAX_RETRIES}
+gui_max_reward_image_history_length: ${GUI_MAX_REWARD_IMAGE_HISTORY_LENGTH}

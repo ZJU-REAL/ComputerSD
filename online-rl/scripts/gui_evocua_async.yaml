@@ -1,0 +1,14 @@
+# EvoCUA defaults from run_multienv_evocua.py (S2).
+dynamic_history: true
+grpo_singleton_reinforce_coef: 1.0
+gui_max_steps: 30
+gui_wait_after_reset: 60
+gui_sleep_after_execution: 0.5
+gui_max_image_history_length: 3
+gui_max_history_turns: 3
+gui_resize_factor: 32
+gui_prompt_style: S2
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60
+prm_enable: false

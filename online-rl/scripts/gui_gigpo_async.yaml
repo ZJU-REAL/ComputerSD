@@ -1,0 +1,52 @@
+# Custom-config for GiGPO online-RL on OSWorld (fully-async, 16-GPU).
+#
+# slime upstream reads this via --custom-config-path and setattr()s each key
+# onto `args` (slime/utils/arguments.py: `if args.custom_config_path: ...`).
+# We use it to inject the args that upstream slime does NOT register but our
+# rollout/reward code reads via getattr(args, ...). This keeps slime unpatched.
+#
+# Why these keys live here (vs being plain CLI flags):
+#   --gui-* / --dynamic-history / --prm-* are NOT in upstream slime's argparse,
+#   so passing them on the CLI would be silently dropped.
+#
+# GiGPO-specific settings for the shared asynchronous launcher:
+#   - dynamic_history MUST be true: GiGPO groups at the STEP level, and the
+#     per-step training samples only exist when each action step is exploded into
+#     its own Sample (rollout_fast/trajectory.build_dynamic_history_samples).
+#     Without it, reward_func sees trajectory-level samples and the step group
+#     never fires (GiGPO degrades to episode-only).
+#   - prm_enable MUST be true: the step-level reward r_t comes from the frozen
+#     SFT analyzer. Without it, all step rewards are 0 and the step term is 0.
+
+# Training data mode: each action step -> one independent training Sample.
+# REQUIRED for GiGPO step-level grouping.
+dynamic_history: true
+gigpo_require_a11y_tree: true
+# A state group with one sample cannot form a relative baseline. GiGPO assigns
+# that sample zero step advantage while retaining its trajectory advantage.
+
+# Rollout-time GUI knobs. config.EpisodeConfig.resolve also falls back to GUI_*
+# env vars, but we set them here so the full surface is in one place.
+gui_max_steps: 30
+gui_wait_after_reset: 60
+gui_sleep_after_execution: 0.5
+gui_max_image_history_length: 3
+
+# Eval-time GUI knobs (read by getattr with NO env fallback, so MUST be here).
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60
+
+# --- SFT analyzer PRM — REQUIRED for GiGPO step term ---
+gui_reward_agent_class_path: reward.analyzer_agent.AnalyzerAgent
+prm_enable: true
+prm_model_path: ${ANALYZER_MODEL_PATH}
+prm_model_name: ${ANALYZER_MODEL_NAME}
+prm_temperature: 0.0
+prm_max_new_tokens: 4096
+prm_max_concurrency: 8
+# One deterministic analyzer call per step is the default.
+prm_m: 1
+# The exact policy student_context is passed to the analyzer; this value is
+# retained for compatibility with the PRM hook.
+gui_max_reward_image_history_length: 3

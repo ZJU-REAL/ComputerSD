@@ -1,0 +1,19 @@
+# Eval dataset config for the GUI-RL partial-async run.
+#
+# online-rl/slime requires `args.eval_datasets` to be non-empty whenever
+# --eval-interval is set (slime/utils/arguments.py: slime_validate_args).
+#
+# IMPORTANT: GUI eval does NOT consume these entries. The real eval tasks are
+# loaded by our eval function (rollout/partial_async_rollout_gui.py ->
+# _gui_eval_rollout) from GUI_EVAL_META_PATH. This file only satisfies slime's
+# validation so the periodic eval hook fires and calls gui_generate_rollout.
+#
+# `path` is not opened at parse time (only stored in args.eval_prompt_data),
+# but we point it at the actual GUI eval meta file for clarity.
+eval:
+  defaults:
+    n_samples_per_eval_prompt: 3
+    temperature: 0.0
+  datasets:
+    - name: gui_osworld
+      path: ../evaluation_examples/test_all.json

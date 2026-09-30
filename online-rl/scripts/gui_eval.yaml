@@ -1,0 +1,14 @@
+# Pure sampling writes trajectory.json/traj.jsonl and step_*.png incrementally.
+# It does not need to construct training-time step Samples or call a PRM.
+dynamic_history: false
+prm_enable: false
+
+gui_max_steps: 30
+gui_wait_after_reset: 60
+gui_sleep_after_execution: 0.5
+gui_max_image_history_length: 3
+
+# Kept for compatibility if this config is reused by an explicit eval call.
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60

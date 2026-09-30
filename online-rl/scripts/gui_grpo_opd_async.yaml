@@ -1,0 +1,45 @@
+# GRPO + step-level privileged-context OPD on OSWorld.
+#
+# One trajectory is expanded into one training Sample per GUI action.  The
+# outcome reward still follows trajectory-level GRPO; analyzer scalar scores
+# are used only to select GUIDE/AVOID for the OPD teacher context.
+dynamic_history: true
+prm_enable: true
+prm_step_coef: 0.0
+gui_opd_enable: ${GUI_OPD_ENABLE}
+sglang_max_logprobs_num: ${GUI_OPD_TOPK}
+rollout_model_name: actor
+train_prm: ${TRAIN_PRM}
+prm_reward_function_path: reward.prm_grpo.prm_reward_func
+prm_reward_post_process_path: reward.prm_grpo.prm_post_process_rewards
+prm_advantage_estimator: grpo
+prm_reward_key: score
+
+gui_reward_agent_class_path: reward.analyzer_agent.AnalyzerAgent
+prm_model_path: ${ANALYZER_MODEL_PATH}
+prm_model_name: ${ANALYZER_MODEL_NAME}
+prm_temperature: ${PRM_TEMPERATURE}
+prm_max_new_tokens: ${PRM_MAX_NEW_TOKENS}
+prm_max_concurrency: ${PRM_MAX_CONCURRENCY}
+prm_m: ${PRM_M}
+prm_lr: ${PRM_LR}
+prm_load: ${PRM_LOAD}
+prm_save: ${PRM_SAVE_CKPT}
+prm_save_hf: ${PRM_SAVE_HF_CKPT}
+# ``prm_max_retries`` retries only requests that fail before a usable analyzer
+# response is returned. Invalid/non-JSON output is a zero-reward format error
+# and is not regenerated. HTTP-level retries within one POST are controlled
+# independently by ``prm_http_max_retries``.
+prm_max_retries: ${PRM_MAX_RETRIES}
+prm_http_max_retries: ${PRM_HTTP_MAX_RETRIES}
+gui_max_reward_image_history_length: ${GUI_MAX_REWARD_IMAGE_HISTORY_LENGTH}
+gui_opd_teacher_http_max_retries: ${GUI_OPD_TEACHER_HTTP_MAX_RETRIES}
+
+gui_max_steps: 30
+gui_wait_after_reset: 60
+gui_sleep_after_execution: 0.5
+gui_max_image_history_length: 3
+
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60

@@ -1,0 +1,2249 @@
+{
+  "suite": "mobileworld",
+  "source": "static AST parse of tasks/definitions (no mobile_world import / no pip install)",
+  "tasks": [
+    {
+      "task_name": "AcceptMeetingTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Reply to Daniel's most recent email to tell him: 'I'll be there at 10:00 AM on Thursday.'",
+      "app_names": [
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "AddBusinessTripAskUserTask",
+      "tags": [
+        "agent-mcp",
+        "agent-user-interaction",
+        "lang-cn"
+      ],
+      "goal": "我下周六10:00am-12:30am要上海虹桥火车站，你帮我找到离上海虹桥火车站10公里以内的景点，我周一上班前去参观下，添加事项到calender，事项为出差游玩，把找到的景点按照\"景点名字：地址\"放入calender事件的描述中，多个景点按逗号分隔",
+      "app_names": [
+        "Calendar",
+        "MCP-Amap"
+      ]
+    },
+    {
+      "task_name": "AddBusinessTripWithCafeTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我下周六10:00am-12:30pm要去「上海虹桥火车站」，添加事项到calender，事项为出差，你帮我找到离上海虹桥火车站10公里以内的景点，我周一上班前去参观下，按照\"景点名字：地址\"放入calender事件的描述中，多个景点按逗号分隔",
+      "app_names": [
+        "Calendar",
+        "MCP-Amap"
+      ]
+    },
+    {
+      "task_name": "AdjustBrightnessMaximumTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Set the brightness to the maximum level.",
+      "app_names": [
+        "Settings"
+      ]
+    },
+    {
+      "task_name": "AdjustBrightnessMinimumTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Set the brightness to the minimum level.",
+      "app_names": [
+        "Settings"
+      ]
+    },
+    {
+      "task_name": "AdjustFontIconMaximumTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Increase the font size and icons on your phone to the maximum setting.",
+      "app_names": [
+        "Settings"
+      ]
+    },
+    {
+      "task_name": "AdjustFontIconMinimumTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Decrease the font size and icons on your phone to the minimum setting.",
+      "app_names": [
+        "Settings"
+      ]
+    },
+    {
+      "task_name": "BidFileRenameAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-cn"
+      ],
+      "goal": "将Download中前缀为bid_的文件, 按照一定的顺序，统一改为'bid_{序号}.{原扩展名}'。",
+      "app_names": [
+        "Files"
+      ]
+    },
+    {
+      "task_name": "BidFileRenameTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "将Download中前缀为bid_的文件, 按创建日期由早到晚，统一按照'bid_{序号}.{原扩展名}'进行重命名。",
+      "app_names": [
+        "Files"
+      ]
+    },
+    {
+      "task_name": "BuyBlackTennisShoesBrotherAddressAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "I want to buy a pair of black tennis shoes for my brother on TaoDian app and ship them directly to his school dormitory.",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "BuySugarFreeColaWorkAddressAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-cn"
+      ],
+      "goal": "帮我在淘店上买一箱无糖可乐，寄到我这次上班的地址，不要寄错到家里",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "CVEmailAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-cn"
+      ],
+      "goal": "在Download内找到最近一个月下载的简历文件，把文件发送给我的HR同事，标题为candiaditaes_cv。",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CVEmailTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "在Download内找到最近一个月下载的简历文件，把文件发送给HR_chen@gmail.com，标题为candidates_cv。",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CalculateCartPricesByOwnerAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Help me calculate the prices of items in the Taodian shopping cart separately for me and my roommate, tell me how much each person needs to pay. Answer in the format 'me/roommate:amount', separated by semicolons, no extra content or whitespace.",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "CalculateWalkingRouteEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我想每天晚饭后从阿里巴巴西溪园区散步到西溪湿地。我家在「浙江省杭州市余杭区文一西路阿里巴巴西溪园区C区三号楼」，公园在「西溪国家湿地公园周家村主入口」，评估把总距离（公里）和预计时长(分钟)email到我的生活邮箱dylan@gmail.com，标题为daily walking",
+      "app_names": [
+        "MCP-Amap",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CancelMeetingTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Could you reply to Daniel's most recent email to tell him I'll have to cancel the meeting on Thursday?",
+      "app_names": [
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CartInfoNotificationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find the items awaiting shipment in TaoDian and send an SMS reminder to the recipient, including the product name and order number, with no other text.",
+      "app_names": [
+        "Messages",
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "CartManagementAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Please help me delete all short-sleeve items from the shopping cart in the TaoDian app. Log in using the password.",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "CartManagementTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "最近天气变冷了，请帮我从淘店app的购物车中删除所有短袖T恤衬衫。如果需要登录，可以通过短信验证码登录。",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "ChangeWallpaperTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Change the wallpaper to a photo from the album that features sunflowers.",
+      "app_names": [
+        "Gallery",
+        "Settings"
+      ]
+    },
+    {
+      "task_name": "CheckCandidateAskUserTask1",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Find Kevin's resume and check whether his skills in database matches my job requirements. If yes, send a text message to HR: 'please kickoff the interview for Kevin.' If no, send a text message to HR: 'please reject the application for Kevin.'",
+      "app_names": [
+        "Files",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckCandidateAskUserTask2",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Find Kevin's resume and check whether his GPA matches my job requirements. If yes, send a text message to HR: 'please pass the application for Kevin.' If no, send a text message to HR: 'please reject the application for Kevin.'",
+      "app_names": [
+        "Files",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckCartPriceTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find the three most expensive items in the TaoDian app shopping cart and calculate their total price. Respond only with an integer representing the total price, with no other text.",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "CheckConferenceAndSendSmsTask1",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my calendar and send an SMS notification to Mia with the dates of my arrival and departure from Paris. The message should contain only the two dates in MM/DD/YYYY format, separated by a comma.",
+      "app_names": [
+        "Calendar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckConferenceAndSendSmsTask2",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my calendar and send an SMS notification to Mia with the dates of my arrival and departure from Tokyo. The message should contain only the two dates in MM/DD/YYYY format, separated by a comma.",
+      "app_names": [
+        "Calendar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckConferenceDurationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "How many days of conference meetings did I schedule in October? Please only return the number of days, no other text.",
+      "app_names": [
+        "Calendar"
+      ]
+    },
+    {
+      "task_name": "CheckConferenceLocationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my email for the location of the MCFT conference hotel, then text the address to Tom (4456547865).Use Google maps to tell me how long it would take to walk from the MIT Stata center to there. Only response the time in minutes. No other text.",
+      "app_names": [
+        "Maps",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckDeduplicatedEventsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "How many deduplicated events are there in the calendar, from October 20 to October 26?",
+      "app_names": [
+        "Calendar"
+      ]
+    },
+    {
+      "task_name": "CheckDepartTimeTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check if I've received an email about the depart time for the CoolHacks hackathon.If not, text Carl (345 6784 3456) 'Do you know what time we're leaving tomorrow?'",
+      "app_names": [
+        "Mail",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckDistanceAskUserTask1",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "What is the driving distance in kilometers from Beijing to my hometown? Response as the following format: beijing to xxx: distance km. xxx denotes the name of the hometown.",
+      "app_names": [
+        "Maps"
+      ]
+    },
+    {
+      "task_name": "CheckDistanceAskUserTask2",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "I want to drive to Tianjin, China from my hometown. Please check the driving distance in kilometers. Reponse only one integer number. No other text.",
+      "app_names": [
+        "Maps"
+      ]
+    },
+    {
+      "task_name": "CheckDistanceMcpTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我在做一个咖啡连锁品牌发展史的研究，上次我去了Manner的全国首店，这次想实地考察Manner咖啡全国第二家店的选址。帮我用高德mcp查一下从杭州东站到它的直线距离？只需要回答数字。",
+      "app_names": [
+        "Chrome",
+        "MCP-Amap"
+      ]
+    },
+    {
+      "task_name": "CheckDistanceMcpTask2",
+      "tags": [
+        "agent-mcp",
+        "agent-user-interaction",
+        "lang-cn"
+      ],
+      "goal": "我的常用收货地址到杭州东站的直线距离是多少公里？只需要回答最终数字",
+      "app_names": [
+        "MCP-Amap",
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "CheckEventAndSetAlarmAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Set an alarm in Clock app to remind me of my meeting with Sam 5 minutes in advance.",
+      "app_names": [
+        "Calendar",
+        "Clock"
+      ]
+    },
+    {
+      "task_name": "CheckEventTimeTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my email for the time of the Christmas party today. Set an alarm for one hour before then.",
+      "app_names": [
+        "Clock",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CheckGithubInfoTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Please check the number of stars and contributors on the AndroidWorld GitHub repository, then send an email to kevin_zhang@example.com with the subject line \"AndroidWorld Repository Stats\" and the following message body:\nThere are XXX stars and XXX contributors in the AndroidWorld repository.\n\nReplace \"XXX\" with the actual numbers you find.",
+      "app_names": [
+        "Chrome",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CheckInterviewTimesTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my email for any job interviews I have in November.Set calendar events for each of them. Use the company name as the title and the interview time as the start and end time.",
+      "app_names": [
+        "Calendar",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CheckInvoiceTask1",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the invoice PDF file in the download directory. The customer has notified that payment will be made 45 days after the due date. Please recalculate the total amount payable and respond with only a single number representing the total amount, with no other text.",
+      "app_names": [
+        "Docreader",
+        "Files"
+      ]
+    },
+    {
+      "task_name": "CheckInvoiceTask2",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the invoice PDF file in the download directory. The customer has notified that payment will be made 45 days after the due date. Please recalculate the total amount payable and forward the result number to the customer via Email.",
+      "app_names": [
+        "Docreader",
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CheckInvoiceTask3",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the invoice PDF file in the download directory. Send a SMS to Mia and report how many hours of the Consulting Services larger than Software Development hours.",
+      "app_names": [
+        "Docreader",
+        "Files",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckInvoiceTask4AskUser",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Read the invoice PDF file in the download directory. 3rd party API will increase 25% of the unit price. Notify Kevin via SMS the new total amount.",
+      "app_names": [
+        "Docreader",
+        "Files",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CheckMealEventAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Check next week's schedule. If there is a meal with someone, email them to ask if it can be canceled.",
+      "app_names": [
+        "Calendar",
+        "Contacts",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CheckMeetingEventAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Check next week's schedule. If there is a meeting with someone, email them to ask if it can be canceled.",
+      "app_names": [
+        "Calendar",
+        "Contacts",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CheckPuchasedItem",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "之前我给朋友在淘店上买了一双鞋，帮我看一下他脚多少尺码。请只回答一个整数, 不要返回任何其他文本.",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "CheckRegistrationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my email for Putnam registration confirmation.If no such email exists, email kathy@gmail.com asking about it with the subject 'Putnam Registration Confirmation'",
+      "app_names": [
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CheckSetMeetTimeTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my email for the date and time of my meeting with Carl.Then, set a one hour calendar event titled 'Board Meeting'",
+      "app_names": [
+        "Calendar",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ChromeSearchBeijingWeatherAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "What will be the maximum temperature at my hometown tomorrow? Answer with only an integer (the number of Celsius degree) and no other text.",
+      "app_names": [
+        "Chrome"
+      ]
+    },
+    {
+      "task_name": "ChromeSearchBeijingWeatherTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Use Chrome to search for Beijing highest temperature today. ONLY give a integer number denoted Celsius degree.",
+      "app_names": [
+        "Chrome"
+      ]
+    },
+    {
+      "task_name": "CloseFlightModeTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Turn off device flight mode",
+      "app_names": [
+        "Settings"
+      ]
+    },
+    {
+      "task_name": "CompareApartmentsDistanceSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "中介给我发了两套房子的信息，我想比较一下哪一套离阿里西溪c园区开车更近，好决定租哪一间。把最近那套房子的地址发给我朋友 Mia",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "CompareEsgRatingsEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "请查询证券代码 600000 在妙盈科技和华证指数的 ESG 评级是否一致。请email 给chen@gmail.com，title为股票价格，内容取决于判别结果，如果两家返回的 esg_rate 完全相同，则内容为\"600000在妙盈科技和华证指数的ESG评级一致\"，否则发送\"600000在妙盈科技和华证指数的ESG评级不一致\"。",
+      "app_names": [
+        "MCP-stockstar",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "CountFileLinesTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check the file_1.txt inside the earliest zip file from July in the Downloads directory and count how many lines it contains. Respond only with an integer representing the line count, with no other text.",
+      "app_names": [
+        "Files"
+      ]
+    },
+    {
+      "task_name": "DeleteAllMessagesAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Delete all messages in SMS app sent from my company.",
+      "app_names": [
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "DeleteEventAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "My schedule on 10/20 is a bit full, please remove a few events.",
+      "app_names": [
+        "Calendar"
+      ]
+    },
+    {
+      "task_name": "DeleteItemsAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "I want to remove some electronic products in the shopping cart of the TaoDian app.",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "DeleteMessagesAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Delete the message about deployment issues in SMS app sent from my company.",
+      "app_names": [
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "DeleteUselessFilesAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Help me to clean the useless files in download directory for stoarage saving.",
+      "app_names": [
+        "Files"
+      ]
+    },
+    {
+      "task_name": "DownloadPoiImagesMcpTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "帮我找到全国第一家Manner咖啡店，用高德mcp工具获取图片url和id，在mattermost上发给Sam并介绍一下这家店的历史（markdown格式）",
+      "app_names": [
+        "Chrome",
+        "MCP-Amap"
+      ]
+    },
+    {
+      "task_name": "DownloadReadmeTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Download the README content from the repository google-research/android_world and send an email to mike@gmail.com with the subject `aw_readme notes for macos` about the notes for macos from the README when setting up the environment.",
+      "app_names": [
+        "MCP-Github",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "DownloadSendReceiptTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Look for a file in my email titled 'receipts.jpg' and download it.Then, send it to to treasurer@gmail.com with the subject 'Proof of purchase', the email should mention the total amount spent in the email.",
+      "app_names": [
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "EstimateBikeRouteTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我打算骑车上班，帮我估算萧山到阿里西溪C园区的距离(公里)和时间（分钟）把结果按`距离(公里),时间(分钟)`的格式发送到我的生活邮箱dylan@gmail.com，标题为`daily bike`",
+      "app_names": [
+        "MCP-Amap",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ExtractBenchmarkComparisonEmailTask",
+      "tags": [
+        "agent-mcp"
+      ],
+      "goal": "I am checking some benchmark numbers for our paper.\nPlease open the paper at: https://arxiv.org/pdf/2508.15144\nIn this paper, locate the results on the **MMBench-GUI L1** test set.\nFrom that benchmark, extract the performance scores of uitars-72B and Claude-3.7\nThen determine:\n1) Whether uitars-72B performs better or worse than Claude-3.7 on MMBench-GUI L1.\n2) The absolute difference in their scores (uitars-72B minus Claude-3.7), keeping the same units as in the table.\nSummarize the result in **one concise sentence** in the following style:\n\"On MMBench-GUI L1, uitars-72B performs [better/worse] than Claude-3.7 by X.X points.\" \nReplace [better/worse] and X.X with the correct comparison and numeric difference.\nThen send an email to my coauthor at coauthor@example.com with:\n- Subject: MMBench-GUI L1 comparison (uitars-72B vs Claude-3.7)\n- Body: exactly that one sentence, and no extra text.\n",
+      "app_names": [
+        "Chrome",
+        "MCP-arXiv",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ExtractMultilingualScoresEmailTask",
+      "tags": [
+        "agent-mcp"
+      ],
+      "goal": "I am preparing the multilingual evaluation section of my paper.\n\nPlease open the paper at: https://arxiv.org/pdf/2505.09388\nIn this paper, the Multilingual Tasks results are presented in a table where the columns\ncorrespond to the two models \"DeepSeek-V3 base\" and \"Qwen3-235B-A22B base\",\nand each row corresponds to a benchmark such as MGSM, MMMLU, and INCLUDE.\nFrom this table, extract the scores of these two models on the following three benchmarks:\n- MGSM\n- MMMLU\n- INCLUDE\n\nFormat the results so that each line corresponds to one benchmark, with the pattern:\nBenchmark: DeepSeek-V3 base=xx.xx, Qwen3-235B-A22B base=yy.yy\nFor example:\nMGSM: DeepSeek-V3 base=82.68, Qwen3-235B-A22B base=83.53\n\nThen send an email to my advisor at advisor@example.com with:\n- Subject: Baseline comparison table from 2403.15137\n- Body: exactly three lines, in this order: MGSM, MMMLU, INCLUDE,\neach line following the specified format, and no extra text.\n",
+      "app_names": [
+        "MCP-arXiv",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ExtractPipelineStagesEmailTask",
+      "tags": [
+        "agent-mcp"
+      ],
+      "goal": "I have just discussed with my collaborator, and they asked me to carefully review the\ndata pipeline figure in the paper: https://arxiv.org/pdf/2505.09388.\nPlease open this paper, locate the data pipeline figure, and focus on the\nupper part of the figure, which is divided into four stages.\nFor each of these four stages, extract its step description in the figure.\nFormat each line as:\nstage N: content\nThen send an email to chen@gmail.com with:\n- Subject: Data pipeline stages from 2505.09388\n- Body: exactly four lines, one for each stage, in the order stage 1 to stage N,\n  each following the format 'stage N: content' with no extra text.\n",
+      "app_names": [
+        "MCP-arXiv",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ExtractTrajectoryEnvironmentsEmailTask",
+      "tags": [
+        "agent-mcp"
+      ],
+      "goal": "Please open the paper at: https://arxiv.org/pdf/2508.15144\nMy collaborator asked me to study how this paper collects trajectory data.\nPlease locate the section(s) that describe the trajectory data collection process\nand identify in how many different environments they collect trajectories, and what these environments are.\nSummarize the answer in the following format:\n- The total number of environments: X\n- <name> \n- <name> \n- ... (and so on for all environments)\nThen send an email to my collaborator at collaborator@example.com with:\n- Subject: Trajectory data collection environments from 2508.15144\n- Body: the summary in the specified format\n",
+      "app_names": [
+        "MCP-arXiv",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ExtractWebpageLinksEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "获取网页https://yenanliu.github.io/AVSS.github.io/的所有子链接，用英文逗号分隔返回，例如：url1,url2,url3，把得到的链接发送到chen@gmail.com，自拟邮件标题。",
+      "app_names": [
+        "MCP-jina",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "FactCheckLemonWaterSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "帮我查一下这句话是不是靠谱：'每天喝柠檬水可以预防癌症。'可靠的话，编辑短信内容'每天喝柠檬水可以预防癌症'，不可靠的话编辑短信内容为'每天喝柠檬水不可以预防癌症'，发送给我妻子1665347803。",
+      "app_names": [
+        "MCP-jina",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "GetArxivPaperEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "I just came across a paper at https://arxiv.org/pdf/2510.20286 — please parse its content, extract the abstract, and email it to mikeshow@gmail.com with the paper title as the subject and the abstract as the body.",
+      "app_names": [
+        "MCP-arXiv",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "GetIssueEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "I came across a complex issue #242 while browsing on the subway. Please help me get the title and main content of this issue from google-research/android_world, and abstract the question body into an email to send to myself at mike@gmail.com with the subject 'Read Later: Issue 242'",
+      "app_names": [
+        "MCP-Github",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "GoogleMapsAlibabaPhoneContactAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Find the Kevin's componany phone number using the google map, and based on that, create a new contact named Kevin Zhang with the company.",
+      "app_names": [
+        "Contacts",
+        "Maps"
+      ]
+    },
+    {
+      "task_name": "GoogleMapsAlibabaPhoneContactTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find the phone number of Alibaba's Hangzhou headquarters on the google map, and based on that, create a new contact named Kevin Zhang with the company.",
+      "app_names": [
+        "Contacts",
+        "Maps"
+      ]
+    },
+    {
+      "task_name": "GoogleMapsAlibabaSouthNeighborAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Open Google Maps and find which company is directly south of my company. ONLY output the company name in English.",
+      "app_names": [
+        "Maps"
+      ]
+    },
+    {
+      "task_name": "GoogleMapsAlibabaSouthNeighborTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Open Google Maps and find which company is directly south of Alibaba Hangzhou headquarters in Binjiang District. ONLY output the company name in English.",
+      "app_names": [
+        "Maps"
+      ]
+    },
+    {
+      "task_name": "GraduationMassEmailTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Search up the UF academic calendar and find out the week that grades are due in the Spring 2026 semester.Then, set a calendar event at 6pm on the Saturday of that week titled 'Graduation Party'Search my email for the list of students graduating from the math department this year.Send an email to all the graduates with the subject 'Graduation Party' and body 'Don't forget about this year's graduation party! More details coming soon.' ",
+      "app_names": [
+        "Calendar",
+        "Chrome",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "InvoiceReceiptCopyAskUserTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "在Download里找到11月内文件名包含invoice或者receipt的PDF复制进我专门用来收录发票和收据的文件夹。",
+      "app_names": [
+        "Files"
+      ]
+    },
+    {
+      "task_name": "InvoiceReceiptCopyTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "在Download里找到11月内文件名包含invoice或者receipt的PDF复制进Finance/invoice文件夹。",
+      "app_names": [
+        "Files"
+      ]
+    },
+    {
+      "task_name": "ItemCheckoutTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "帮我在淘店下单购物车里的iphone 15 pro，寄到浙江省杭州市余杭区阿里巴巴西溪C区，收件人张先生，收件人电话13800138000。如需登录，可以通过短信验证码。在支付页面让我操作",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "ListGithubIssuesEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Help me list the open issues from the google-research/android_world repository (only title and number), organize them into a simple todo list, with each line formatted as title: number, email to mike@gmail.com, subject as `Issues To Fix`, content as the obtained issues, if there are none then set the email content to `No open issues.`",
+      "app_names": [
+        "Chrome",
+        "MCP-Github",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ListRecentCommitsEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Help me check the recent 3 commits summary from the google-research/android_world repository (including author and commit message), format each line as 'author: commit message' and email to mike@gmail.com, email subject as \"Recent Commits\"",
+      "app_names": [
+        "Chrome",
+        "MCP-Github",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "LocalFileManagementTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "I'm running out of space, can you check my files and delete zip files that are older than 1 year in my Download folder. Send myself on mattermost the list of deleted files just for record",
+      "app_names": [
+        "Files",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "LocalFileManagementTask2",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "There are too many files in my download folder, can you check my files and compress files that are older than 1 year in a single `old_files.zip` file. Delete the files after compression. Send myself an email with the list of deleted files just for record",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "MastodonAddBookmarkTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, add all posts of user kitty that have #cats tag to bookmarks.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonAddFeaturedHashtagsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "On Mastodon, add some hashtags as my featured hashtags in my profile, add the hashtags: summerrain, nature, and photography.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonAdjustTootsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "On Mastodon, remove all bookmarks and add them as favorites, and boost all of them.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonCalendarMultiMemosTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "On Mastodon, find lectures in the #openTalk hashtag for the current month, then add the lecture information (time, location, topic) to the calendar events. If the start time is within 10 days, set the reminder time to 1 day before. Otherwise, set the reminder time to 3 days before the start time.",
+      "app_names": [
+        "Calendar",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonChangeHeaderTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "On Mastodon, replace my profile header with the tiger photo from my photo gallery.",
+      "app_names": [
+        "Gallery",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonChangeLanguageTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, set the language of the account to Chinese Simplified.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonConditionalFavoTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "favorite all toots tagged “#dogs” on Mastodon, but do not add them to my favorite list if they are already in my favorite list or bookmark list.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonCreateListTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Create a list called \"Family,\" only followed users can reply, and add my family members — Alex, Emma, and Jack",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonCreateMemoTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find information under #openTalk on Mastodon about the topic of Urban Mobility lectures, then create a event on my calendar with time, location, and topic as title, and set a reminder 1 day before.",
+      "app_names": [
+        "Calendar",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonDumpImgAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Save the images from pupper's earliest post on Mastodon to the specified path.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonDumpQcodeAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Save the frank's QR code on Mastodon to my frequently used directory for easy access.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonExportFollowsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, export my follows in settings and save it as my_following.csv.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonFavoriteTootsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Search for toots tagged “#dogs” on Mastodon, favorite all of them.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonFilterLanguageTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "On Mastodon, set up filters to only show posts in English, Japanese, and Chinese Simplified.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonFollowTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find Robert's nickname in Contacts, then search it on Mastodon, and follow him.",
+      "app_names": [
+        "Contacts",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonGetServerInfoTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "On mastodon, switch to owner account, then go to settings backend to query the database size, and post a toot to tell the result, use MB as the unit",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonImportMutedUsersTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, import my muted list from the file named 'muted_accounts.csv' in the Downloads directory.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonInviteTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Generate a one-person invite link that expires in one day, auto-follows me, and send it to my friend Leonard by SMS.",
+      "app_names": [
+        "Mastodon",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "MastodonMallPurchaseCommodityTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "我在mastodon上关注的jack分享了一个商品,请你在淘店app下单购买2双同款，收货地址为：广东省广州市天河区华景新城，收货人李四，收货人电话13800139999。",
+      "app_names": [
+        "Mastodon",
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "MastodonMallShareOrderTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "在淘店中,找到我的订单中的手表商品,然后在mastodon发布一条推文介绍商品,内容包括商品名称,购买价格和商品图片。",
+      "app_names": [
+        "Mastodon",
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "MastodonManageHashtagsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, unfollow the hashtags I followed before related to animals.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonManageMultiListTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "View my lists on Mastodon, delete all previously created lists, and create two new lists. One list named 'open' should allow only I followed users to reply and add users, whose username contains 'open'. Another list named 'cute' should allow only members of the list to reply, enable hide members in following, and add users, whose avatar is a dog or cat.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonMattermostPostNoticeTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Please help me sync the Security announcement from mike in the announcement channel on mattermost to mastodon, do not change the original content, the announcement is only visible to followers, and also @openCompany account.",
+      "app_names": [
+        "Mastodon",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MastodonMultiInviteTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Generate two invite links with different conditions. One with validity days of 1 day and max uses of 1, send it to my friend Leonard by SMS. Another with validity days of 7 days and auto-follow me, send it to my friend Ella by SMS.",
+      "app_names": [
+        "Mastodon",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "MastodonNewFilterTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, add a new filter called “Anti-Spoiler-BCS”, use all the words from the text file named filter_BCS in the documents folder as blocked keywords, and set it to expire 5 days from today.",
+      "app_names": [
+        "Files",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonNewPostTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Open Mastodon app and post a new toot with the content 'Hello from AI agent!'",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonOpenAutomatedDeletionTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, enable automatically delete old posts, only set pinned posts as expected, and set the age threshold to 7 days, Keep posts with at least 20 favs or 20 reblogs.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonPinTootsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, pin the first post I published after creating the account to the top.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonPostEditedPhotoTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Select a random photo from the gallery, crop it to a 9:16 ratio, and post it with the tag #onePhoto. Post with the account @test.",
+      "app_names": [
+        "Gallery",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonPostPollTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Search on Google for the '2025 Nobel Prize in Economics' and use the names of the winners as the poll options. Post a poll on Mastodon with the hashtag '#vote2025', allowing multiple selections and lasting for one week.",
+      "app_names": [
+        "Chrome",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonRemoveBookmarkTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "In Mastodon, remove the posts with #pets tag from bookmarks on my account.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonReplyTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Reply to the toot of gourmet user about Greek food Moussaka, and the reply content should be 'Nice sharing, i love it'.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonReportTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Report Frank’s post about “the gas leak event” for spam, include the whole post content as the report reason, and block Frank after submitting the report.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonRevisePhotoAltTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "please check the ALT content of the picture in the toot i posted about 'Impression, Sunrise' in Mastodon, if the author Monet is not mentioned, please add 'Author is Monet' to the first line",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonRevisePollTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Edit my Mastodon poll about which country has the largest area by removing the option “USA” and changing the option “Brazil” to “Canada.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonSavePhotosTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find the post that Alice published on October 5th on Mastodon, and save all the images to the phone.",
+      "app_names": [
+        "Gallery",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonServerInfoReportTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "switch to owner account in mastodon, then go to account backend to find the number of reports not tackled yet, and send the number as an email content in the format: \"Recent reports: xxx\" to owner@mastodon_example.com by email, the number should be in Arabic numerals.",
+      "app_names": [
+        "Mail",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonShareLocationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Search for the location Eiffel Tower on Google Map, and share the link to Mastodon, add the Eiffel Tower image in my photo gallery, then post it.",
+      "app_names": [
+        "Gallery",
+        "Maps",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonSharePhotosAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Share all photos of flowers from the Pictures album (in Gallery app) via Mastodon, and add a caption.",
+      "app_names": [
+        "Gallery",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonUnfollowTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "manage my following list on Mastodon, only keep the latest three users, and unfollow all other users.",
+      "app_names": [
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MastodonUpdateContactsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "My friend Olivia has left new phone and email information in the latest post on Mastodon, please update the information to my contacts, and send a text message to Olivia, the content of the text message should be 'Hello, how are you'. Remember to set the email label to internet.",
+      "app_names": [
+        "Contacts",
+        "Mastodon"
+      ]
+    },
+    {
+      "task_name": "MattermostBudgetApprovalPipelineTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Review the 'budget-approvals-q4' channel for budget requests from different departments. Each request includes ROI calculations using mathematical formulas.\n\nYour tasks:\n1. Identify all budget requests that exceed $50,000 (these require executive approval).\n2. Calculate and identify which department has the HIGHEST projected ROI based on the NPV (Net Present Value) formula results posted in the channel.\n3. Post a consolidated budget summary in the channel with a markdown table showing:\n   - Department name\n   - Requested amount\n   - Projected ROI\n   - Approval status (Executive Required or Standard)",
+      "app_names": [
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostCreateChannelTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Create a channel on Mattermost called 'reading' for paper reading. Add everyone to the channel and greet everyone with a welcome message.",
+      "app_names": [
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostCustomerFeedbackAnalysisTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Analyze the 'customer-feedback' channel. Identify all NEGATIVE feedback items (complaints, bugs, issues). 1. Send a summary email to 'product@company.com' with subject 'Weekly Negative Feedback Digest' listing these items.\n2. Schedule a meeting 'Feedback Review' for next Friday at 14:00 in the Calendar.\n3. Reply to the channel with 'Feedback logged and meeting scheduled'.",
+      "app_names": [
+        "Calendar",
+        "Mail",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostDeadlineReconciliationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "I suspect there's a discrepancy between what was discussed and what got documented. Please verify by checking the project-updates channel on Mattermost for any messages mentioning 'deadline' or 'milestone'. For each deadline mentioned, check if there's a corresponding calendar event within ±2 days of the mentioned date. Generate a reconciliation report showing: Deadlines with matching calendar events (PASS), Deadlines WITHOUT calendar events (- Missing), Calendar events not mentioned in chat (📅 Untracked). Email this report to dylan@gmail.com with subject 'Deadline Audit Report'. For each missing calendar event, create it with title '[AUTO] {deadline description}' and post confirmation in the project-updates channel listing the created event titles.",
+      "app_names": [
+        "Calendar",
+        "Mail",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostEmailTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Sam has sent me a signed contract on Mattermost. Send it to our Legal (legal@company.com) through email. Include the tracking code. Send sam a quick confirmation when you're done. Thanks.",
+      "app_names": [
+        "Mail",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostIncidentEscalationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Monitor the 'support-tickets' channel for CRITICAL incidents. If a critical ticket is found:\n1. Create a dedicated channel named 'incident-<ticket_id>' (e.g., incident-ticket-123).\n2. Add user 'sam.oneill@neuralforge.ai' to this new channel.\n3. Email 'cto@company.com' with subject 'CRITICAL INCIDENT: <ticket_id>' and the issue description.\n4. Schedule a 'Discussion on <ticket_id>' meeting for tomorrow at 09:00 AM in the calendar.",
+      "app_names": [
+        "Calendar",
+        "Mail",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostMeetingPlanningTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Our team (alex, sam, and I) need to schedule an offsite meeting next week. Check the team-schedule channel on Mattermost where alex and sam have posted their availability. Find a 2-hour overlapping free slot across all three people (my calendar is in the Calendar app). The meeting location should be reachable within 30 minutes walking from our office at '阿里巴巴西溪园区C区'. Evaluate these two venue options: 1) '杭州师范大学' 2) '浙江大学紫金港校区图书馆' Choose the venue that is reachable within 30 minutes walking. Create a calendar event named `Offsite Meeting` for the meeting at the first available slot. Post in the team-schedule channel announcing the meeting with: date, time, venue name, and estimated walking time. Use format: 'Meeting scheduled: [date] [time]-[end_time] at [venue], ~[X] min walk'. Send a separate private DM to alex with the walking distance in meters to the chosen venue.",
+      "app_names": [
+        "Calendar",
+        "MCP-Amap",
+        "Maps",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostProjectHandoverTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "I'm passing the Phoenix project to Alex. Add Alex to the phoenix channel on mattermost.  ping everyone to schedule a 1-hour project meeting on Monday (find an available time slot from my calendar). Use this exact format in your message: `Meeting Time: [YYYY-MM-DD] from [HH:MM] to [HH:MM]`",
+      "app_names": [
+        "Calendar",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostProjectStatusReportTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "I need a comprehensive project status report. Check these Mattermost channels: 'backend-team', 'frontend-team', and 'qa-team' for status updates. For each team, identify items marked as 'blocked', 'at-risk', or 'on-track'. Cross-reference with calendar milestones to verify if timeline claims are accurate. Generate a risk matrix report in the following format: \nOn Track (status=on-track AND milestone exists within 3 days): <item name>, <item name>, ... (and so on for all on-track items) \nAt Risk (status=at-risk OR no milestone found): <item name>, <item name>, ... (and so on for all at-risk items) \nBlocked (explicitly marked blocked): <item name>, <item name>, ... (and so on for all blocked items) \nEmail this report to 'pm@company.com' with subject 'Sprint Status Risk Matrix'. For any blocked items, create a calendar event titled '[ESCALATION] {item name}' on the next business day at 10:00-10:30. Post a summary in the 'project-sync' channel with the counts: X on-track, Y at-risk, Z blocked.",
+      "app_names": [
+        "Calendar",
+        "Mail",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostReadingGroupTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Please help me complete the task in mattermost reading group following sam's request.",
+      "app_names": [
+        "Chrome",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostReplyToMessageTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "I just got our OSWorld eval SR result (35.5). Reply to my own earlier message in AI-Research on mattermost with the result.",
+      "app_names": [
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostResourceConflictResolutionTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check the 'resource-booking' channel on Mattermost for resource requests. Cross-reference each request with the calendar to determine status. Send a report email to 'facilities@company.com' with subject 'Resource Booking Conflicts' in the following format:\nAPPROVED: <resource>, <resource>, ... (no calendar conflict)\nCONFLICT: <resource>, <resource>, ... (overlaps existing booking)\nFor approved requests, add calendar events titled 'BOOKED: [resource] - [requester]'. For conflicts, DM the requester about the issue.",
+      "app_names": [
+        "Calendar",
+        "Mail",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostSendFileTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "It's alex's 21st birthday today. Send a birthday message to him privately on mattermost. Upload a birthday cake image to the message.",
+      "app_names": [
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostShiftCoverageTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Review shift swap requests in 'shift-requests' channel. Check the Calendar for any conflicts on the requested dates. If there is a conflict (e.g. 'All Hands' or 'Training'), reply to the request in the channel with 'Denied: [Reason]'. If there is no conflict, forward the request via email to 'hr@company.com' with subject 'Shift Swap Request' and reply to the user 'Request escalated to HR'.",
+      "app_names": [
+        "Calendar",
+        "Mail",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "MattermostTechnicalDebtTriageTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Review the 'tech-debt-review' channel on Mattermost for technical debt discussions. Team members have posted complexity analysis using mathematical formulas. Your tasks:\n1. Identify the module with the HIGHEST complexity score (look for the LaTeX formula results).\n2. Send Sarah an SMS with the highest-priority module name and its complexity score.\n3. Create a new contact named 'Refactoring Team' with phone number '15559876543' and add the company 'TechDebt Solutions Inc'.\n4. Post a summary in the 'tech-debt-review' channel listing all modules sorted by complexity (highest first) in a markdown table format.",
+      "app_names": [
+        "Contacts",
+        "Mattermost",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "MattermostVisualInstructionResponseTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check the 'emergency-response' channel on Mattermost. The operations manager has posted a whiteboard photo with emergency contacts and shift times. Please:\n1. Create new contacts for the people listed in the 'Emergency Contacts' image. Only fill the first name and phone number.\n2. Set alarms for the shift start times listed in the 'Shift Schedule' image, using the shift name as the alarm label.",
+      "app_names": [
+        "Clock",
+        "Contacts",
+        "Mattermost"
+      ]
+    },
+    {
+      "task_name": "OpenFlightModeTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Turn on device flight mode",
+      "app_names": [
+        "Settings"
+      ]
+    },
+    {
+      "task_name": "ParseReadingGroupPaperEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我刚听完一场线上 reading group，报告是一篇 arXiv 论文，ID 是 2401.01234，帮我把这篇论文摘要email给mikeshow@gmail.com，标题为\"reading group paper\"",
+      "app_names": [
+        "MCP-arXiv",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "PhotoManagementTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find all my food pics from the past month and help me classify them into different folders named travel locations. You can find where I visited from calendar.",
+      "app_names": [
+        "Calendar",
+        "Gallery"
+      ]
+    },
+    {
+      "task_name": "PlanCommuteRouteSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Please help me design exactly 1 multimodal commute route in Shanghai that:\nStarts at my home: \"上海市徐汇区漕溪北路41号\" and ends at my office: \"上海市浦东新区世纪大道100号\".\nThe route must contain exactly 3 segments in this fixed order:\n1) walking from home to a nearby metro or bus station;\n2) integrated public transit (metro / bus) between two stations;\n3) walking from the arrival station to my office.\n帮我找出总通勤时间小于50min，且步行时间最短的路线；请短信发送下面的内容给我的同事Tom 13800138000：\n起点、终点、需乘地铁的起止站和对应的坐标：[名称：坐标，逗号分隔]\n 步行路段的instruction，逗号分隔\n 步行和乘坐地铁的总距离（米），逗号分隔\n ",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "PlanCyclingRouteSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Please help me plan exactly 1 cycling route in Hangzhou that: Starts and ends at \"杭州东站 (Hangzhou East Railway Station)\". Passes through exactly the following 4 landmarks in Hangzhou, in any order:\n1. \"保俶塔 (Baochu Pagoda)\"\n2. \"雷峰塔 (Leifeng Pagoda)\"\n3. \"杭州杨公堤 (Yanggong Causeway)\"\n4. \"杭州奥林匹克体育中心主体育场 (Hangzhou Olympic Sports Center Stadium)\"\nForms a loop with the following strict constraints on straight-line distances between consecutive waypoints (including the final segment back to the start):\nEach segment between consecutive points must be between 3 km and 15 km.\nThe total riding distance of the whole loop must be between 20 km and 42 km\n请短信发送下面的内容给我的骑行伙伴mike 18756627900:5个地点名称和坐标：[地点：坐标，逗号分隔]\\n 骑行的路线：从起点到终点，按顺序组织地点的名字，逗号分隔\\n 相邻点之间的骑车距离，按骑行顺序计算，逗号分隔 \\n 总路线的距离",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "PlanDrivingRouteSmsTask",
+      "tags": [
+        "agent-mcp"
+      ],
+      "goal": "Please help me plan exactly 1 self-driving sightseeing shortest path route in Jiangsu that:\nStarts at \"南京市玄武区龙蟠路100号\" (Nanjing Railway Station),\nmust visit exactly 3 scenic spots chosen from the following 5 candidates (each visited at most once),\nand finally ends at \"江苏省苏州市姑苏区苏站路27号\" (Suzhou Railway Station):\n1. \"南京夫子庙\" (Confucius Temple in Nanjing)\n2. \"中山陵\" (Sun Yat-sen Mausoleum in Nanjing)\n3. \"无锡鼋头渚风景区\" (Yuantouzhu Scenic Area in Wuxi)\n4. \"无锡灵山大佛\" (Lingshan Grand Buddha in Wuxi)\n5. \"苏州拙政园\" (Humble Administrator's Garden in Suzhou)\n请短信发送下面的内容给我的自驾伙伴Jack 13600136000：\n把最后选择的路线上的5个地点名称和坐标：[名称：坐标，经度,纬度，逗号分隔]，按实际驾车顺序给出\n 相邻地点之间的驾车距离（米），按驾车顺序计算，逗号分隔\n 总直线距离（米）\n ",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "PlanRouteTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "帮我规划从杭州亲橙酒店到萧山机场之间规划一条驾车路线，把返回的路线信息组织成一段内容，instructions用逗号分隔，发送到我的生活邮箱dylan@gmail.com，标题为`daily travel`",
+      "app_names": [
+        "MCP-Amap",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "PlanTaxiRouteSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Please help me plan exactly 1 shortest taxi route in Chengdu that:\nStarts at \"成都双流国际机场T2航站楼\" and ends at my hotel \"成都市锦江区春熙路南段8号\".\nOn the way, I must visit exactly these 2 landmarks (in any order):\n1. \"宽窄巷子\"\n2. \"锦里古街\"\n请短信发送下面的内容给我的旅行伙伴Lucy 13900139000：\n4个地点名称和坐标：[名称：坐标，经度,纬度，逗号分隔]\n 最短距离的地点浏览顺序，逗号分隔\n 三段打车的驾车距离（米），按顺序计算，逗号分隔\n 总驾车距离（米）\n ",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "ProjectPaperEmailAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-cn"
+      ],
+      "goal": "查找手机Documents文件夹内所有project开头的pdf文件，移动到我指定的文件夹下，并把文件夹下的所有文件发送到Catherine，标题为project。",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "ReadQwen3PaperTask1",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the downloaded Qwen3 paper and indicate by how many points Qwen3-32B (Thinking) lags behind the best model on the AIME25 benchmark. The answer should consist of only a single number representing the score difference.",
+      "app_names": [
+        "Docreader",
+        "Files"
+      ]
+    },
+    {
+      "task_name": "ReadQwen3PaperTask2",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the downloaded Qwen3 paper and tell me how many core contributors in this paper. The answer should consist of only a single number.",
+      "app_names": [
+        "Docreader",
+        "Files"
+      ]
+    },
+    {
+      "task_name": "ReadQwen3PaperTask3",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the downloaded Qwen3-Omni paper and tell me how many benchmarks are used in evaluting the Text to Text performance of Qwen3-Omni-Thinking model. The answer should consist of only a single number.",
+      "app_names": [
+        "Docreader",
+        "Files"
+      ]
+    },
+    {
+      "task_name": "ReadQwen3PaperTask4",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the downloaded Qwen3-Omni paper and tell me the size of Vision encoder in Qwen3-Omni-30B-A3B model. Please provide only the numeric value in millions of parameters.",
+      "app_names": [
+        "Docreader",
+        "Files"
+      ]
+    },
+    {
+      "task_name": "ReadQwen3PaperTask5",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Read the downloaded Qwen3 paper and tell me what kind of Austroasiatic language is supported by Qwen3 in Belebele Benchmark.The answer should be a list of languages separated by comma.No other text.",
+      "app_names": [
+        "Docreader",
+        "Files"
+      ]
+    },
+    {
+      "task_name": "RecentTotalExpenseTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "请帮我算一下在淘店上最近1个月我总共花了多少钱。请只回答一个整数, 不要返回任何其他文本.",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "ReplyEmailViaSmsAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "I received an email about the Next.js Conf. Please check my calendar. If I'm available, send the sender an SMS saying, 'I can attend the conference.' If not, reply with, 'Sorry, I can't attend.'",
+      "app_names": [
+        "Calendar",
+        "Mail",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "RequestCarpoolingTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check my email for the time of the math competition tomorrow. If it's between 12 and 5 pm, text Daniel (3522228876) 'Hey, could you help send Bob to the competition tomorrow? Thanks.'",
+      "app_names": [
+        "Mail",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "ReviewPaperEmailTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "查找手机Documents文件夹内所有review开头的pdf文件，移动在Document/paper下，并将paper目录下的所有文件，发送到chen@gmail.com，标题为paper。",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SMSManagement",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check all unread sms messages, delete spams, and provide a summary of recruitment messages to me via email by sending to dylan@gmail.com. Note I'm only interested in open data scientist role.",
+      "app_names": [
+        "Mail",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SayHelloRoommatesAskUserTask1",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Add my new roommates contacts to favorites and text 'hello' to each of them.",
+      "app_names": [
+        "Contacts",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SayHelloRoommatesAskUserTask2",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Add my new roommates contacts to favorites and text 'hello' to each of them.",
+      "app_names": [
+        "Contacts",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "ScheduleCoffeeTimeViaSmsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "I've received a coffee time invitation via text message; please check the calendar.If I am available in this time slot, reply \"OK\" and schedule a corresponding event on my calendar.Otherwise reply \"Not available in this time slot.\"",
+      "app_names": [
+        "Calendar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "ScheduleLunchViaSmsAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "I've received a lunch invitation via text message; please reply \"OK\" and schedule a lunch event ranging from 11 a.m. to 12 a.m. on Oct 16.",
+      "app_names": [
+        "Calendar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "ScheduleLunchViaSmsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "I've received a lunch invitation via text message; please reply \"OK\" and schedule a corresponding event on my calendar.",
+      "app_names": [
+        "Calendar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "ScheduleOneOneViaSmsAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "I've received a one-on-one meeting invitation from my boss. Please check my calendar and reply 'OK' if it's clear. If there's a scheduling conflict, please notify the person in the conflict event by SMS: 'Sorry, I can't attend the meeting.'",
+      "app_names": [
+        "Calendar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SearchBenchmarkTasksSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "帮我在google-research/android_world里搜一下该benchmark构建任务的数量，短信给16655342。",
+      "app_names": [
+        "MCP-Github",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SearchGithubIssuesSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我手机上看到一段报错信息里有关键字 TurnOffWifi，帮我在 GitHub 上搜索仓库google-research/android_world里相关issue，如果找到类似问题，就所有 issue 链接（\",\"分隔）发短信给同事1776652334，如果没有搜索到issue短信内容为\"no turnoffwifi issues\"",
+      "app_names": [
+        "MCP-Github",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SearchItemAndCheckoutTask",
+      "tags": [
+        "lang-cn"
+      ],
+      "goal": "万圣节快到了，帮我在淘店下单买一套临时纹身，在支付页面让我操作",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "SearchMllmPapersEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我准备写博士 thesis 相关工作，方向是「multimodal large language models」，帮我在 arXiv 搜索 multimodal large language model 相关论文，找最近发表的5篇，把论文的链接email给mikeshow@gmail.com, 标题为mllm，内容为5篇论文的链接，链接之间有换行符",
+      "app_names": [
+        "MCP-arXiv",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SearchPharmacyTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我现在的位置在西溪园区亲橙客栈，家里有人突然感冒，你帮我查500米范围内的药店，以`name：address`的格式，每个药店一行，帮我短信给我妻子1997777900",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SearchPythonReposEmailTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "I'm on the subway and want to find some Python open source projects to learn from. Help me search on GitHub for repositories with language:Python stars:>1000, select the most starred 5 repositories, format it as 'repo name -- repo link', organize them into the email content with line breaks between different repository information, set the email title to \"Python Learning\", and send it to mike@gmail.com",
+      "app_names": [
+        "MCP-Github",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SearchRustUsersTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "I've been learning Rust recently, help me search on GitHub for active users related to rust, find the top 5 with the most followers, format their usernames and profile pages as \"username: profile link\" per line, email to mikeshow@gmail.com with the title 'top-5 rust users'",
+      "app_names": [
+        "MCP-Github",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SearchTopInfoAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Search for the recent news in the field I am interested, and send an email to Kevin with a subject line that includes the field name and the following message:\nHere is the recent news in the [field name] field:\n[One sentence summary of the recent news you found]",
+      "app_names": [
+        "Chrome",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SearchWhiteSneakersCheckoutAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-cn"
+      ],
+      "goal": "帮我在淘店上找一双白色的鞋，日常通勤穿的，按我平时穿的码下单，默认收件人和地址",
+      "app_names": [
+        "Taodian"
+      ]
+    },
+    {
+      "task_name": "SendArxivPapersSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "先帮我看一下最近 arXiv 上 cs.AI 分类的新论文，帮我调5篇最新的，按照\"题目：arXiv 链接\"每行的格式发送给mike 18753923900",
+      "app_names": [
+        "MCP-arXiv",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendFormsTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Please check my email for any field trip forms sent from October 3rd onward.Download all of them and send them to principal@school.edu with the subject 'Field Trip Forms'. Then, tell me how many forms you found as a single number.",
+      "app_names": [
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SendHighDividendStocksSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我想长期拿一点高股息的蓝筹股，帮我筛一下当前股息率大于 4% 的股票名单，列出最高的前3只股票，每个股票占一行，按照（股票名称 (证券代码) : 股息率）的格式将结果短信发送给177663344",
+      "app_names": [
+        "MCP-stockstar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendInterviewEmailTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find Kevin's resume and send an email to Kevin saying: \"Your interview is scheduled for tomorrow morning at 10:30 AM.\"",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SendInterviewInvitationAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Send a message to Kevin to information him \"Your interview is scheduled for tomorrow morning at 10:30 AM\".",
+      "app_names": [
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendInterviewInvitationTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find Kevin's resume and send a text message to Kevin saying: \"Your interview is scheduled for tomorrow morning at 10:30 AM.\"",
+      "app_names": [
+        "Files",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendInvoiceWithInfoTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Send the invoice PDF file in the download directory to Mia. And attach the following information to the email: the total amount of the invoice and exchange to RMB according to the latest exchange rate. The format is total amount: xxx, exchange rate: xxx, total amount in RMB: xxx.",
+      "app_names": [
+        "Chrome",
+        "Docreader",
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SendLocationAddressSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "我从高德复制了一段终点坐标 120.0351,30.2809（阿里西溪附近），帮我用它查出详细的行政区划地址，然后短信给1766242644，按照\"坐标：地址\"的格式编写短信内容",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendPhoneNumberAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Send Kevin's phone number (in message body) to Grace via email. ",
+      "app_names": [
+        "Contacts",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SendStockEsgRatingSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "请先筛选出近三年ROE大于250的全部股票，然后将结果中的证券代码按从小到大排序，取排序后的第一只股票，查询这只股票在妙盈科技的ESG评级。最终将这只股票的security_code和esg_rate按照\"code:rate\"的格式短信发送给177663344",
+      "app_names": [
+        "MCP-stockstar",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendWaiverTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Send the file 'waiver.jpg' as an email attachment to bob@gmail.com. Title the email 'Updated waiver'.",
+      "app_names": [
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SendWeatherSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "明天下午我朋友要来杭州西溪这边，你帮我查一下杭州明天白天的天气和情况和温度发送给我的朋友，电话100077788236",
+      "app_names": [
+        "MCP-Amap",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendWebpageAudioCountSmsTask",
+      "tags": [
+        "agent-mcp",
+        "lang-en"
+      ],
+      "goal": "Please count the occurrences of the word 'audio' on the page https://yenanliu.github.io/AVSS.github.io/ (case insensitive), and finally organize the final count with the summarized content into a text message and send it to 177663344",
+      "app_names": [
+        "MCP-jina",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "SendZipFilesAskUserTask1",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Compress all downloaded files in the \"Download\" folder from the past three months into a single file, renamed as \"documents.zip\", email it to Kevin using `Mail` app with the list of compressed files, seprated by comma. No other text.",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SendZipFilesAskUserTask2",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Compress the earliest 5 downloaded files into a single file, renamed as \"documents.zip\", email it to Kevin using `Mail` app with the list of compressed files, seprated by comma. No other text.",
+      "app_names": [
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SetAlarmTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Set a weekend alarm for 8:25 a.m. with the ringtone \"beebeep\" and vibration off. ",
+      "app_names": [
+        "Clock"
+      ]
+    },
+    {
+      "task_name": "SetAlarmTaskAskUser1",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Please set a wake-up alarm for me on Friday.",
+      "app_names": [
+        "Clock"
+      ]
+    },
+    {
+      "task_name": "SetAlarmTaskAskUser2",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Please set a wake-up alarm for my weekend, and choose my favorite ringtone.",
+      "app_names": [
+        "Clock"
+      ]
+    },
+    {
+      "task_name": "SetAlarmTaskAskUser3",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Please set a morning wake-up alarm for my weekend at 9:45 p.m. Choose the ringtone 'beebeep' for the alarm.",
+      "app_names": [
+        "Clock"
+      ]
+    },
+    {
+      "task_name": "SharePhotosAskUserTask",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Send some photos to Kevin via email, with text \"Here are some pictures for you.\" ",
+      "app_names": [
+        "Gallery",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SharePhotosTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Find all flowers pictures in gallery and send them via email to kevin_zhang@example.com, with text \"Here are some flowers for you.\"",
+      "app_names": [
+        "Gallery",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "StockCandidateListTask",
+      "tags": [
+        "agent-mcp",
+        "lang-cn"
+      ],
+      "goal": "帮我在当前股息率大于 4% 的股票里，挑5只 ESG 评级在 BBB 及以上的，给我列个候选名单。每个股票占一行，按照(股票名称 (证券代码):ESG评级)的格式显示，记录到price.txt文件，存储在系统中的Documents文件夹下。",
+      "app_names": [
+        "Files",
+        "MCP-stockstar"
+      ]
+    },
+    {
+      "task_name": "SuggestPaperTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Reply to Tony's email asking for paper suggestions with a pdf of the ddpm paper (save the pdf to Download with the name `ddpm.pdf`).Mention the full name and the abstract of the paper in the email body.",
+      "app_names": [
+        "Chrome",
+        "Files",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "SumFileLinesTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Check the all files inside the earliest zip file from July in the Downloads directory and count how many lines it contains in total. Respond only with an integer representing the line count, with no other text.",
+      "app_names": [
+        "Files"
+      ]
+    },
+    {
+      "task_name": "TakeSelfieAskUserTask1",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Take a selfie, and share it with Jimmy via email.",
+      "app_names": [
+        "Camera",
+        "Gallery",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "TakeSelfieAskUserTask2",
+      "tags": [
+        "agent-user-interaction",
+        "lang-en"
+      ],
+      "goal": "Take a photo, and share it with Henry via email.",
+      "app_names": [
+        "Camera",
+        "Gallery",
+        "Mail"
+      ]
+    },
+    {
+      "task_name": "TakeSelfieTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Take a photo.",
+      "app_names": [
+        "Camera"
+      ]
+    },
+    {
+      "task_name": "TextArrivalTimeTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Search up how long it takes to drive from Orlando to Miami.Text Susan (4538997638) the approximate time I'll be there if I leave at 5 pm.",
+      "app_names": [
+        "Maps",
+        "Messages"
+      ]
+    },
+    {
+      "task_name": "ThanksgivingPrepTask",
+      "tags": [
+        "lang-en"
+      ],
+      "goal": "Email me (user@gmail.com) a list of the flavoring ingredients needed to make Pecan pie with subject 'Pie shopping'.You can browse the following link for reference: https://sallysbakingaddiction.com/my-favorite-pecan-pie-recipe/Then, set an 8 am calendar event titled 'Thanksgiving Shopping' one week before Thanksgiving 2025.",
+      "app_names": [
+        "Calendar",
+        "Chrome",
+        "Mail"
+      ]
+    }
+  ]
+}

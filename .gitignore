@@ -1,0 +1,28 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+venvs/
+.env
+.env.*
+
+# Training outputs and model weights
+ckpt/
+results/
+wandb/
+tensorboard/
+ray_tmp/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.log
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+# 16-GPU rollout allocation for GRPO + step-level OPD.
+# The actor uses seven rollout GPUs and the analyzer uses one.  TRAIN_PRM=1
+# enables analyzer-only weight synchronization from the PRM trainer.
+sglang:
+  - name: actor
+    update_weights: true
+    server_groups:
+      - worker_type: regular
+        num_gpus: 4
+        num_gpus_per_engine: 1
+  - name: ${ANALYZER_MODEL_NAME}
+    model_path: ${ANALYZER_MODEL_PATH}
+    update_weights: ${TRAIN_PRM}
+    server_groups:
+      - worker_type: regular
+        num_gpus: 4
+        num_gpus_per_engine: 1

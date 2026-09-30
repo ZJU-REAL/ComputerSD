@@ -1,0 +1,14 @@
+sglang:
+  - name: actor
+    update_weights: true
+    server_groups:
+      - worker_type: regular
+        num_gpus: ${GUIDANCE_POLICY_GPUS}
+        num_gpus_per_engine: 1
+  - name: ${ANALYZER_MODEL_NAME}
+    model_path: ${ANALYZER_MODEL_PATH}
+    update_weights: false
+    server_groups:
+      - worker_type: regular
+        num_gpus: ${GUIDANCE_ANALYZER_GPUS}
+        num_gpus_per_engine: 1

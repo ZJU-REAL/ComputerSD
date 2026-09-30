@@ -1,0 +1,43 @@
+# Custom-config for the matched 16-GPU GRPO baseline.
+#
+# slime upstream reads this via --custom-config-path and setattr()s each key
+# onto `args` (slime/utils/arguments.py: `if args.custom_config_path: ...`).
+# We use it to inject the args that upstream slime does NOT register but our
+# rollout/reward code reads via getattr(args, ...). This keeps slime unpatched.
+#
+# Why these keys live here (vs being plain CLI flags):
+#   --gui-* / --dynamic-history are NOT in upstream slime's argparse, so passing
+#   them on the CLI would be silently dropped by megatron's ignore_unknown_args.
+
+# Standard trajectory-level GRPO: one completed GUI trajectory is one training
+# sample. Each prompt is therefore normalized over exactly the configured eight
+# trajectories, and every advantage uses only the environment outcome reward.
+dynamic_history: true
+
+# When infrastructure failures leave only one valid trajectory for a prompt,
+# use its raw +/-1 outcome as a REINFORCE-style advantage instead of discarding
+# the learning signal. Values below 1 can damp this higher-variance fallback.
+grpo_singleton_reinforce_coef: 1.0
+
+# Rollout-time GUI knobs. config.EpisodeConfig.resolve also falls back to GUI_*
+# env vars, but we set them here so the full surface is in one place.
+gui_max_steps: 30
+# NOTE: tried 15s here (from 60s). reset dropped 61.8s->17.3s as expected, but it
+# did NOT speed up training: running-req stayed flat (~2, rr=0 still 20%), so the
+# "60s sleep starves sglang concurrency" theory was DISPROVEN. Worse, trajectories
+# grew longer (median 13->25 steps, 45% hit the 30-step cap), likely because the
+# env wasn't settled at 15s. Reverted to 60s pending an acc check.
+gui_wait_after_reset: 60
+gui_sleep_after_execution: 0.5
+gui_max_image_history_length: 3
+
+# Eval-time GUI knobs. These are read by getattr(args, ...) with NO env-var
+# fallback (config.py:163/167/171), so they MUST come through here.
+gui_eval_max_steps: 50
+gui_eval_sleep_after_execution: 3.0
+gui_eval_wait_after_reset: 60
+
+# Do not run a process reward model for this baseline. trajectory_runner fills
+# sample.reward directly from OSWorld evaluation (+1 success, -1 otherwise),
+# and slime's GRPO estimator performs group normalization over those outcomes.
+prm_enable: false

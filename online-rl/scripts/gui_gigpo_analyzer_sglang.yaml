@@ -1,0 +1,19 @@
+# SGLang deployment for the 16-GPU analyzer-backed GiGPO run.
+#
+# The actor occupies seven rollout GPUs and the frozen SFT analyzer occupies
+# one. The total is eight, matching the default ROLLOUT_GPUS in the launcher;
+# the other eight GPUs are reserved for the Megatron actor.
+sglang:
+  - name: actor
+    update_weights: true
+    server_groups:
+      - worker_type: regular
+        num_gpus: 7
+        num_gpus_per_engine: 1
+  - name: ${ANALYZER_MODEL_NAME}
+    model_path: ${ANALYZER_MODEL_PATH}
+    update_weights: false
+    server_groups:
+      - worker_type: regular
+        num_gpus: 1
+        num_gpus_per_engine: 1
