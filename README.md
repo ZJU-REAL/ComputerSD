@@ -39,7 +39,3 @@ bash online-rl/scripts/gui_qwen3vl_16gpu_async_gigpo.sh
 # EvoCUA 对应配置
 bash online-rl/scripts/gui_evocua_8b_16gpu_async_grpo_opd.sh
 ```
-
-这些脚本共用 `online-rl/scripts/gui_qwen3vl_16gpu_async_common.sh`。默认启动本地 Ray head；已有 Ray 集群时，可设置 `RESET_LOCAL_RAY=1` 先停止本地 Ray。请在专用训练节点上运行。
-
-`online-rl/scripts/gui_qwen3vl_8b_eval_only.sh`、`gui_qwen3vl_8b_sample_only.sh` 与 EvoCUA 评测封装仍引用未包含在当前代码快照中的 `gui_qwen3vl_8b_fast.sh`，因此暂不能直接执行。发布评测流程前需要补齐该入口。
