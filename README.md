@@ -6,16 +6,22 @@ ComputerSD helps computer-use agents learn from ongoing interaction with executa
 
 ## Quick Start
 
-After installing the training dependencies and starting an accessible OSWorld environment server, run the 16-GPU configuration from the repository root:
+On a Linux x86_64 NVIDIA GPU server, install Conda and Git and use an NVIDIA driver compatible with CUDA 12.9. An accessible OSWorld environment server and the model checkpoints are also required. From a shell, run:
 
 ```bash
+git clone https://github.com/ZJU-REAL/ComputerSD.git
+cd ComputerSD
+conda create -n computersd python=3.12.3 pip -y
+conda activate computersd
+bash setup.sh
+
 export HF_CKPT=path/to/qwen3-vl-8b-thinking
 export ANALYZER_MODEL_PATH=path/to/gui-analyzer
 export GUI_ENV_SERVER_URL=http://gui-env-host/osworld-node
 bash online-rl/scripts/gui_qwen3vl_16gpu_async_grpo_opd.sh
 ```
 
-Replace the placeholder model paths and server address with your own. The launcher uses `online-rl/`, `slime/`, and `Megatron-LM/` from this repository.
+Replace the placeholder model paths and server address with your own. `setup.sh` installs the CUDA 12.9 GPU stack and the pinned Python packages in `requirements.txt`; the launcher uses the bundled `online-rl/`, `slime/`, and `Megatron-LM/` sources. The launch configuration expects 16 GPUs.
 
 ## Method in Brief
 

@@ -1,6 +1,10 @@
 # Python and local environments
 __pycache__/
 *.py[cod]
+*.egg-info/
+*.so
+build/
+dist/
 .pytest_cache/
 .mypy_cache/
 .venv/
