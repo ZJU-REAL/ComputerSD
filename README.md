@@ -1,12 +1,31 @@
-# ComputerSD
+<h1 align="center">
+  ComputerSD
+</h1>
 
-**Online Self-Distillation from Real-Time Feedback for Computer-Use Agents**
+<div align="center">
+
+<p><em>Online Self-Distillation from Real-Time Feedback for Computer-Use Agents</em></p>
+
+[Yong Du](mailto:duyong123@zju.edu.cn)<sup>1</sup>, &nbsp; Tongbo Chen<sup>1</sup>, &nbsp; Zhengxi Lu<sup>1</sup>, &nbsp; Yizhou Liu<sup>1</sup>, &nbsp; Bofan Chen<sup>1</sup>, <br>
+Tao Jiang<sup>2</sup>, &nbsp; Wenhao Xu<sup>2</sup>, &nbsp; [Yongliang Shen](mailto:syl@zju.edu.cn)<sup>1,†</sup>  
+
+<sup>1</sup>Zhejiang University, &nbsp; <sup>2</sup>Ant Group
+
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.40253) [![Github](https://img.shields.io/badge/ComputerSD-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ZJU-REAL/ComputerSD)
+
+</div>
+
+---
+<div align="center">
+  <img src="assets/motivation.png" alt="Motivation of ComputerSD" width="80%" />
+</div>
 
 ComputerSD helps computer-use agents learn from ongoing interaction with executable GUI environments. After each action, a GUI analyzer turns the resulting state transition into real-time guidance and a step-level value score. The guidance supplies privileged context for online self-distillation, while the value score regulates its token-level learning signals. ComputerSD combines these signals with trajectory-level GRPO in a fully asynchronous training framework. On OSWorld-Verified, it improves success rates over outcome-only GRPO by 1.9 percentage points with Qwen3-VL-8B-Thinking and 4.1 points with EvoCUA-8B.
 
+---
+
 ## Quick Start
 
-On a Linux x86_64 NVIDIA GPU server, install Conda and Git and use an NVIDIA driver compatible with CUDA 12.9. An accessible OSWorld environment server and the model checkpoints are also required. From a shell, run:
 
 ```bash
 git clone https://github.com/ZJU-REAL/ComputerSD.git
@@ -21,7 +40,7 @@ export GUI_ENV_SERVER_URL=http://gui-env-host/osworld-node
 bash online-rl/scripts/gui_qwen3vl_16gpu_async_grpo_opd.sh
 ```
 
-Replace the placeholder model paths and server address with your own. `setup.sh` installs the CUDA 12.9 GPU stack and the pinned Python packages in `requirements.txt`; the launcher uses the bundled `online-rl/`, `slime/`, and `Megatron-LM/` sources. The launch configuration expects 16 GPUs.
+Replace the placeholder model paths and server address with your own. `setup.sh` installs the CUDA 12.9 GPU stack and the pinned Python packages in `requirements.txt`; the launcher uses the bundled `online-rl/`, `slime/`, and `Megatron-LM/` sources.
 
 ## Method in Brief
 
